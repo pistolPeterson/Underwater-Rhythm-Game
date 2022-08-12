@@ -2,20 +2,20 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+Untitled Underwater Rhythm Game/[Ll]ibrary/
+Untitled Underwater Rhythm Game/[Tt]emp/
+Untitled Underwater Rhythm Game/[Oo]bj/
+Untitled Underwater Rhythm Game/[Bb]uild/
+Untitled Underwater Rhythm Game/[Bb]uilds/
+Untitled Underwater Rhythm Game/[Ll]ogs/
+Untitled Underwater Rhythm Game/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
-/[Mm]emoryCaptures/
+Untitled Underwater Rhythm Game/[Mm]emoryCaptures/
 
 # Recordings can get excessive in size
-/[Rr]ecordings/
+Untitled Underwater Rhythm Game/[Rr]ecordings/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -65,8 +65,27 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+Untitled Underwater Rhythm Game/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
+Untitled Underwater Rhythm Game/[Aa]ssets/[Ss]treamingAssets/aa.meta
+Untitled Underwater Rhythm Game/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Never ignore DLLs in the FMOD subfolder.
+!Untitled Underwater Rhythm Game/[Aa]ssets/Plugins/FMOD/**/lib/*
+
+# Don't ignore images and gizmos used by FMOD in the Unity Editor.
+!Untitled Underwater Rhythm Game/[Aa]ssets/Gizmos/FMOD/*
+!Untitled Underwater Rhythm Game/[Aa]ssets/Editor Default Resources/FMOD/*
+                    
+# Ignore the Cache folder since it is updated locally.
+Untitled Underwater Rhythm Game/[Aa]ssets/Plugins/FMOD/Cache/*
+                    
+# Ignore bank files in the StreamingAssets folder.
+Untitled Underwater Rhythm Game/[Aa]ssets/StreamingAssets/**/*.bank
+Untitled Underwater Rhythm Game/[Aa]ssets/StreamingAssets/**/*.bank.meta
+                    
+# If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
+# Log files can be ignored.
+fmod_editor.log
+
