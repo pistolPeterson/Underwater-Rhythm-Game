@@ -26,6 +26,7 @@ public class MusicManager : MonoBehaviour
 
     }
 
+    public int mostRecentBeat;
 
     private void Awake()
     {
@@ -95,6 +96,8 @@ public class MusicManager : MonoBehaviour
             }
 
         }
+        int yo; 
+        Debug.Log(instance.getTimelinePosition(out yo) + "be"); 
         return FMOD.RESULT.OK;
     }
 }
