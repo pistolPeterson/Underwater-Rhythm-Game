@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &43219473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,11 +154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music:
     Guid:
-      Data1: -766568404
-      Data2: 1077916280
-      Data3: 11364252
-      Data4: -213830255
-    Path: event:/Music
+      Data1: 975098394
+      Data2: 1175199411
+      Data3: -934177621
+      Data4: -961935348
+    Path: event:/Music/PlayIntro
   mostRecentBeat: 0
 --- !u!4 &43219474
 Transform:

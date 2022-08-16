@@ -493,14 +493,15 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 0
   HasPlatforms: 0
-  sourceProjectPath: ../../../Documents/FMOD Studio/ISTW FMod project/Untitled Water
-    Game FMOD/Untitled Water Game FMOD.fspro
-  sourceBankPath: Assets/Plugins/FMOD Bank/Desktop
+  sourceProjectPath: ../../../../../Documents/FMOD Studio/ISTW FMod project/Untitled
+    Water Game FMOD/Untitled Water Game FMOD.fspro
+  sourceBankPath: ../../../../../Documents/FMOD Studio/ISTW FMod project/Untitled
+    Water Game FMOD prt2/Build/Desktop
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 1
-  BankLoadType: 0
+  AutomaticEventLoading: 0
+  BankLoadType: 1
   AutomaticSampleLoading: 0
   EncryptionKey: 
   ImportType: 0
