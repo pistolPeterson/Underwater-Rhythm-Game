@@ -495,8 +495,7 @@ MonoBehaviour:
   HasPlatforms: 0
   sourceProjectPath: ../../../../../Documents/FMOD Studio/ISTW FMod project/Untitled
     Water Game FMOD/Untitled Water Game FMOD.fspro
-  sourceBankPath: ../../../../../Documents/FMOD Studio/ISTW FMod project/Untitled
-    Water Game FMOD prt2/Build/Desktop
+  sourceBankPath: ../../../Untitled Underwater Rhythm Game/Assets/Plugins/FMOD Bank/Desktop
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
@@ -519,7 +518,9 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
+  - Desktop2/Desktop/Master
   - Master
+  - Desktop/Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
