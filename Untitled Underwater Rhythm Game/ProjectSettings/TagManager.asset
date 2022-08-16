@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground_Back_2
+    uniqueID: 820907773
+    locked: 0
+  - name: Ground_Back_1
+    uniqueID: 1595313311
+    locked: 0
+  - name: Ground
+    uniqueID: 4113206023
+    locked: 0
+  - name: Fog_VFX
+    uniqueID: 2372884907
+    locked: 0
+  - name: Ground_Front_1
+    uniqueID: 1373268411
+    locked: 0
+  - name: Ground_Front_2
+    uniqueID: 3842629511
+    locked: 0
