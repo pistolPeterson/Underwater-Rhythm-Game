@@ -24,6 +24,7 @@ public class Tentacle : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(targetDir.position);
         segmentPoses[0] = targetDir.position;
 
         for(int i = 1; i < segmentPoses.Length; i++)
