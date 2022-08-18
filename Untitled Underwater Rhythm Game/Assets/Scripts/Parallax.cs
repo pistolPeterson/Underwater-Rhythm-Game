@@ -9,7 +9,6 @@ public class Parallax : MonoBehaviour
     Camera camera;
     private void Awake()
     {
-        Debug.Log("yo?");
 
         basePos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         camera = FindObjectOfType<Camera>();
@@ -22,7 +21,6 @@ public class Parallax : MonoBehaviour
         float newX = basePos.x + (camera.transform.position.x - camBase.x) * ((basePos.z % 10) / 10);
         float newY = basePos.y + (camera.transform.position.y - camBase.y) * ((basePos.z % 10) / 10);
 
-        Debug.Log(basePos.x + " " + basePos.y);
         transform.position = new Vector3(newX, newY, basePos.z);
     }
 }
