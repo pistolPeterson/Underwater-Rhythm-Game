@@ -16,6 +16,8 @@ public class SubLightGateTrigger : MonoBehaviour
 
             if (playerLightState.playerLightState == LightStates.FirstLightState && !isOpen)
             {
+                Debug.Log("attempting to move gate");
+
                 FindObjectOfType<LightGate>().MoveGate();
                 FindObjectOfType<LightGate>().isOpen = true;
             }
