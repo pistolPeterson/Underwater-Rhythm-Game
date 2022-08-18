@@ -6,11 +6,12 @@ using DG.Tweening;
 public class LightGate : MonoBehaviour
 {
     private LightState playerLs; 
-    private bool isOpen = false;
+    public bool isOpen = false;
     // Start is called before the first frame update
     void Start()
     {
         playerLs = FindObjectOfType<LightState>();
+        isOpen = false;
     }
 
     // Update is called once per frame
@@ -19,13 +20,12 @@ public class LightGate : MonoBehaviour
         if(playerLs.playerLightState == LightStates.FirstLightState && !isOpen)
         {
             //move the gate up
-            Debug.Log("moving gate");
-            MoveGate(); 
-            isOpen = true;
+          //  MoveGate(); 
+          //  isOpen = true;
         }
     }
 
-    void MoveGate()
+    public void MoveGate()
     {
         transform.DOMove(new Vector3(26, 50, 0), 4);
     }
