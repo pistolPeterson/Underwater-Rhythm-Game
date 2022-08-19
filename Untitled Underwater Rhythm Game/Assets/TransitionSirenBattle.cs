@@ -15,6 +15,7 @@ public class TransitionSirenBattle : MonoBehaviour
             Debug.Log("Time to start a siren battle");
             //add delay between steps?
 
+            MusicTrigger();
             //move siren to correct position
             MoveSiren();
             //freeze player and move player to correct position
@@ -49,6 +50,13 @@ public class TransitionSirenBattle : MonoBehaviour
     void ZoomCam()
     {
         FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(80, 0, -125));
+    }
+
+    void MusicTrigger()
+    {
+        var music = FindObjectOfType<MainMenuMusic>();
+        if (music != null)
+            music.MusicTransition();
     }
 }
 

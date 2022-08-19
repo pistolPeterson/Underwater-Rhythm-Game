@@ -12,6 +12,7 @@ public class MainMenuMusic : MonoBehaviour
     {
         instance = RuntimeManager.CreateInstance(startMusic);
         instance.start();
+        DontDestroyOnLoad(this);
       //  
     }
 
@@ -23,5 +24,9 @@ public class MainMenuMusic : MonoBehaviour
     public void OpenClarinet()
     {
         instance.setParameterByName("Player Progression", 2.1f);
+    }
+    public void MusicTransition()
+    {
+        instance.setParameterByName("Player Progression", 4.1f);
     }
 }

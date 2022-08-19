@@ -18,6 +18,9 @@ public class SubLightGateTrigger : MonoBehaviour
             {
                 Debug.Log("attempting to move gate");
 
+                var music = FindObjectOfType<MainMenuMusic>();
+                if (music != null)
+                    music.OpenClarinet();
                 FindObjectOfType<LightGate>().MoveGate();
                 FindObjectOfType<LightGate>().isOpen = true;
             }
