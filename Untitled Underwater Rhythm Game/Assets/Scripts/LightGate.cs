@@ -27,6 +27,7 @@ public class LightGate : MonoBehaviour
 
     public void MoveGate()
     {
-        transform.DOMove(new Vector3(26, 50, 0), 4);
+        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + 25, transform.position.z);
+        transform.DOMove(newPosition, 4);
     }
 }
