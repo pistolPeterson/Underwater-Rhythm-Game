@@ -32,7 +32,7 @@ public class TransitionSirenBattle : MonoBehaviour
 
     void MoveSiren()
     {
-        Vector3 newPosition = new Vector3(100 ,0, 0);
+        Vector3 newPosition = new Vector3(130 ,0, 0);
         transform.DOMove(newPosition, 4);
     }
 
@@ -41,7 +41,7 @@ public class TransitionSirenBattle : MonoBehaviour
         PlayerMovement playerM = FindObjectOfType<PlayerMovement>();
         playerM.FreezePlayer();
 
-        Vector3 newPosition = new Vector3(50, 0, 0);
+        Vector3 newPosition = new Vector3(30, 0, 0);
         playerM.transform.DOMove(newPosition, 4);
 
     }
@@ -49,7 +49,9 @@ public class TransitionSirenBattle : MonoBehaviour
 
     void ZoomCam()
     {
-        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(80, 0, -125));
+
+
+        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(80, 15, -125));
     }
 
     void MusicTrigger()

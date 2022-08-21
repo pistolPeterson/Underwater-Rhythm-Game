@@ -32,6 +32,6 @@ public class CameraFollow : MonoBehaviour
     public void FollowObjectOneTime(Vector3 vector3)
     {
         followPlayer = false;
-        transform.DOMove(new Vector3(80, 0, -125), 3);
+        transform.DOMove(vector3, 3);
     }
 }
