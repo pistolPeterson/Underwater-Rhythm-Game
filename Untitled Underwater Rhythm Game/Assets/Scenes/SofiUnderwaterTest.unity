@@ -1131,7 +1131,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461527153}
   m_LocalRotation: {x: -0, y: -0, z: 0.6481794, w: 0.76148766}
-  m_LocalPosition: {x: 0.28, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2221,7 +2221,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3424,13 +3424,13 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 0
       scalar: 0.9999
       minScalar: 0.9999
       maxCurve:
@@ -3483,8 +3483,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startFrame:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 0.9999
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3543,7 +3543,13 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 922427839, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
+    - sprite: {fileID: 685491278, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
+    - sprite: {fileID: -2003403278, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
+    - sprite: {fileID: 830113935, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
+    - sprite: {fileID: -2049481335, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
+    - sprite: {fileID: 577655302, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
+    - sprite: {fileID: -1942868314, guid: cd3310ea655ec6043a807dfc6d051cf4, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
