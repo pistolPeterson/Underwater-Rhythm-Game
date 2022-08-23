@@ -13,14 +13,19 @@ public class NoteEvent : UnityEvent<NoteLength, NoteInputType>
 }
 public class ButtonInput : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance instance;
-    public EventReference buttonNote;
+    private FMOD.Studio.EventInstance instance1;
+    public EventReference noteSFX1;
 
-    public Button button;
+    private FMOD.Studio.EventInstance instance2;
+    public EventReference noteSFX2;
+    private FMOD.Studio.EventInstance instance3;
+    public EventReference noteSFX3;
+    private FMOD.Studio.EventInstance instance4;
+    public EventReference noteSFX4;
+
    
 
-    public Sprite pressedImg;
-    public Sprite normalImg;
+  
 
     public KeyCode keyCode1;
     public NoteInputType noteType;
@@ -33,8 +38,11 @@ public class ButtonInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = RuntimeManager.CreateInstance(buttonNote);
-       
+        instance1 = RuntimeManager.CreateInstance(noteSFX1);
+        instance2 = RuntimeManager.CreateInstance(noteSFX2);
+        instance3 = RuntimeManager.CreateInstance(noteSFX3);
+        instance4 = RuntimeManager.CreateInstance(noteSFX4);
+
         time = 0; 
         lastTimePressed = 0;
         isPressing = false;
@@ -45,25 +53,65 @@ public class ButtonInput : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (Input.GetKeyDown(keyCode1) )
+        if (Input.GetKeyDown(KeyCode.Q) )
         {
             StartPressing();
+            PlayNote(NoteInputType.Q);
         }
 
 
-        if (Input.GetKeyUp(keyCode1))
+        if (Input.GetKeyUp(KeyCode.Q))
         {
             StopPressing();
+            StopNote(NoteInputType.Q);
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            StartPressing();
+            PlayNote(NoteInputType.W);
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            StopPressing();
+            StopNote(NoteInputType.W);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartPressing();
+            PlayNote(NoteInputType.E);
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            StopPressing();
+            StopNote(NoteInputType.E);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            StartPressing();
+            PlayNote(NoteInputType.R);
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            StopPressing();
+            StopNote(NoteInputType.R);
         }
     }
     void StartPressing()
     {
         time = 0;
         isPressing = true;
-        button.image.sprite = pressedImg;
         //start playing note audio event 
-        instance.start();
-        Debug.Log
+        instance1.start();
+        
     }
 
     void StopPressing()
@@ -71,7 +119,6 @@ public class ButtonInput : MonoBehaviour
         if (!isPressing) return;
 
         isPressing = false; 
-        button.image.sprite = normalImg;
         lastTimePressed = time;
         if (lastTimePressed >= 0.4f)
             noteEvent?.Invoke(NoteLength.LONG, noteType);
@@ -79,8 +126,48 @@ public class ButtonInput : MonoBehaviour
             noteEvent?.Invoke(NoteLength.SHORT, noteType);
 
         //stop playing note audio event
-        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        instance1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
+
+    private void PlayNote(NoteInputType type)
+    {
+        switch (type)
+        {
+            case NoteInputType.Q:
+                instance1.start(); 
+                break;
+            case NoteInputType.W:
+                instance2.start();
+                break;
+            case NoteInputType.E:
+                instance3.start();
+                break;
+            case NoteInputType.R:
+                instance4.start();
+                break;
+        }
+    }
+
+    private void StopNote(NoteInputType type)
+    {
+        switch (type)
+        {
+            case NoteInputType.Q:
+                instance1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                break;
+            case NoteInputType.W:
+                instance2.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                break;
+            case NoteInputType.E:
+                instance3.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                break;
+            case NoteInputType.R:
+                instance4.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                break;
+        }
+    }
+
+
 }
 
 public enum NoteLength
@@ -93,8 +180,8 @@ public enum NoteLength
 public enum NoteInputType
 {
     NONE,
-    A,
-    B,
-    C,
-    D
+    Q,
+    W,
+    E,
+    R
 }
