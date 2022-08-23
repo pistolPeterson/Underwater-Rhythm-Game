@@ -1246,6 +1246,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1365,6 +1366,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 9041413965701554153}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - Master
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1001 &535186510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1586,6 +1605,59 @@ Transform:
   m_Father: {fileID: 9041413965701554153}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &651175136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651175138}
+  - component: {fileID: 651175137}
+  m_Layer: 0
+  m_Name: Melody System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &651175137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651175136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70056fcabb5659f4891c0e401bc37df0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvl1Melody:
+  - noteLength: 2
+    noteInputType: 1
+  - noteLength: 2
+    noteInputType: 1
+  - noteLength: 2
+    noteInputType: 1
+  - noteLength: 2
+    noteInputType: 1
+--- !u!4 &651175138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651175136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 832.2094, y: 369.20425, z: 0.23856705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667120670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6935298630513536227, guid: 81a942138040c3e4296de98f89aec696, type: 3}
@@ -1788,6 +1860,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46852bffb0af2d946918f331926b8d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNote:
+    Guid:
+      Data1: 619868914
+      Data2: 1127898889
+      Data3: -1160712772
+      Data4: 631850549
+    Path: event:/Music Note Playes/Lvl 1 Notes/lvl1 - A
   button: {fileID: 817031797}
   pressedImg: {fileID: 21300000, guid: d22f8acbaa109064f9367669c5824b53, type: 3}
   normalImg: {fileID: 21300000, guid: de104d32a95556349875721f3a1b1e55, type: 3}
@@ -2548,6 +2627,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46852bffb0af2d946918f331926b8d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNote:
+    Guid:
+      Data1: 812928402
+      Data2: 1155997063
+      Data3: -405281129
+      Data4: -210845930
+    Path: event:/Music Note Playes/Lvl 1 Notes/lvl1 - C
   button: {fileID: 1098165159}
   pressedImg: {fileID: 21300000, guid: d22f8acbaa109064f9367669c5824b53, type: 3}
   normalImg: {fileID: 21300000, guid: de104d32a95556349875721f3a1b1e55, type: 3}
@@ -3093,6 +3179,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46852bffb0af2d946918f331926b8d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNote:
+    Guid:
+      Data1: 619868914
+      Data2: 1127898889
+      Data3: -1160712772
+      Data4: 631850549
+    Path: event:/Music Note Playes/Lvl 1 Notes/lvl1 - A
   button: {fileID: 1662042019}
   pressedImg: {fileID: 21300000, guid: d22f8acbaa109064f9367669c5824b53, type: 3}
   normalImg: {fileID: 21300000, guid: de104d32a95556349875721f3a1b1e55, type: 3}
@@ -3326,6 +3419,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46852bffb0af2d946918f331926b8d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonNote:
+    Guid:
+      Data1: 404284458
+      Data2: 1302444501
+      Data3: 1150802053
+      Data4: -735615163
+    Path: event:/Music Note Playes/Lvl 1 Notes/lvl1 - D
   button: {fileID: 1837320805}
   pressedImg: {fileID: 21300000, guid: d22f8acbaa109064f9367669c5824b53, type: 3}
   normalImg: {fileID: 21300000, guid: de104d32a95556349875721f3a1b1e55, type: 3}

@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToOverworld()
     {
+        Debug.Log("Starting next game");
         FindObjectOfType<LevelLoader>().LoadNextLevel();     
     }
 }

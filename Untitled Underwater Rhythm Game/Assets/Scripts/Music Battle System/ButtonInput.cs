@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FMODUnity;
 
 
 [System.Serializable]
@@ -12,6 +13,8 @@ public class NoteEvent : UnityEvent<NoteLength, NoteInputType>
 }
 public class ButtonInput : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance instance;
+    public EventReference buttonNote;
 
     public Button button;
    
@@ -30,6 +33,8 @@ public class ButtonInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = RuntimeManager.CreateInstance(buttonNote);
+       
         time = 0; 
         lastTimePressed = 0;
         isPressing = false;
@@ -57,6 +62,8 @@ public class ButtonInput : MonoBehaviour
         isPressing = true;
         button.image.sprite = pressedImg;
         //start playing note audio event 
+        instance.start();
+        Debug.Log
     }
 
     void StopPressing()
@@ -72,6 +79,7 @@ public class ButtonInput : MonoBehaviour
             noteEvent?.Invoke(NoteLength.SHORT, noteType);
 
         //stop playing note audio event
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
 
