@@ -23,8 +23,9 @@ public class CameraFollow : MonoBehaviour
 
     }
 
-    void FollowPlayer()
+    public void FollowPlayer()
     {
+        followPlayer = true;
         var newPos = new Vector3(playerPos.position.x, playerPos.position.y, cam.position.z);
         gameObject.transform.position = newPos;
     }

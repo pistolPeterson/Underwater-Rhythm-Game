@@ -6,6 +6,8 @@ public class SetUpBattleState : MBSMState
 {
     public MBSMState sirenSing; 
     public bool battleSetUp;
+    [SerializeField] private GameObject battleBoard;
+    [SerializeField] private GameObject successAnim;
     private void Start()
     {
         battleSetUp = false;
@@ -14,6 +16,8 @@ public class SetUpBattleState : MBSMState
     {
         //call transitionsirenbattle stuff 
         FindObjectOfType<TransitionSirenBattle>().SetUpBattle();
+        battleBoard.SetActive(true);
+        successAnim.SetActive(true);
     }
 
     public override void Destruct()

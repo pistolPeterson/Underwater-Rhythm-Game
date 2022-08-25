@@ -5,7 +5,9 @@ using UnityEngine;
 public class EndBattleState : MBSMState
 {
     public MBSMState waitingForBattle;
-    public bool battleEnded; 
+    public bool battleEnded;
+    [SerializeField] private GameObject battleBoard;
+    [SerializeField] private GameObject sucessAnim; 
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,10 @@ public class EndBattleState : MBSMState
 
         battleEnded = false;
         //turn off UI, save any game data somewhere 
-
+        battleBoard.SetActive(false);
+        sucessAnim.SetActive(false);
+        FindObjectOfType<PlayerMovement>().UnFreezePlayer();
+        FindObjectOfType<CameraFollow>().FollowPlayer();
     }
 
     public override void Destruct()

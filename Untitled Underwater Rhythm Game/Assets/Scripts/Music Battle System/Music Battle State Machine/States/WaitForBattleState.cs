@@ -6,6 +6,8 @@ public class WaitForBattleState : MBSMState
 {
     public SetUpBattleState setUpBattle; 
     public bool goToBattle = false;
+    [SerializeField] private GameObject battleBoard;
+    [SerializeField] private GameObject successAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class WaitForBattleState : MBSMState
     public override void Construct()
     {
         goToBattle = false; 
+        battleBoard.SetActive(false);
+        successAnim.SetActive(false);
     }
 
     public override void Destruct()
