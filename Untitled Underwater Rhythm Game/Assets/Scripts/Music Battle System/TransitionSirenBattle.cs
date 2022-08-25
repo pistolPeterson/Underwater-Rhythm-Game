@@ -55,6 +55,12 @@ public class TransitionSirenBattle : MonoBehaviour
     {
         Vector3 newPosition = new Vector3(200, 5, 0);
         transform.DOMove(newPosition, 3.5f);
+        StartCoroutine(waitThenEndBattle());
+    }
+    private IEnumerator waitThenEndBattle()
+    {
+        yield return new WaitForSeconds(1.0f);
+        FindObjectOfType<EndBattleState>().BattleEnded();
     }
 
     void MovePlayer()
@@ -81,5 +87,7 @@ public class TransitionSirenBattle : MonoBehaviour
         if (music != null)
             music.MusicTransition();
     }
+
+    public void ResetBattle() { battleStarted = false; }
 }
 

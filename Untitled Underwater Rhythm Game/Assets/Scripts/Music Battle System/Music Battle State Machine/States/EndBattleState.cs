@@ -38,6 +38,7 @@ public class EndBattleState : MBSMState
         FindObjectOfType<CameraFollow>().FollowPlayer();
         FindObjectOfType<TransitionSirenBattle>().MoveSirenExitBattle();
         sirenLaughInstance.start();
+        FindObjectOfType<TransitionSirenBattle>().ResetBattle();
     }
 
     public override void Destruct()

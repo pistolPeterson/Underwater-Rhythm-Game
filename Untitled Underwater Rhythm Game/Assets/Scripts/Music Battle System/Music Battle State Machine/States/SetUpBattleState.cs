@@ -17,9 +17,11 @@ public class SetUpBattleState : MBSMState
     {
         //call transitionsirenbattle stuff 
         FindObjectOfType<TransitionSirenBattle>().SetUpBattle();
+        
         battleBoard.SetActive(true);
         successAnim.SetActive(true);
         sirenSingAnim.SetActive(true);
+        FindObjectOfType<SirenMoveNoteAnim>().ShowSirenMarkerEmpty();
     }
 
     public override void Destruct()

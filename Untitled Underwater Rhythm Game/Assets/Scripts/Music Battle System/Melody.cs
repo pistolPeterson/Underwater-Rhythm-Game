@@ -45,6 +45,7 @@ public class Melody : MonoBehaviour
 
     private IEnumerator sing(List<NoteObject> melody)
     {
+        
         foreach (NoteObject note in melody)
         {
             yield return new WaitForSeconds(1);
@@ -56,6 +57,7 @@ public class Melody : MonoBehaviour
         //tell siren sing state we are done 
         Debug.Log("tell siren sing state we are done singing");
         FindObjectOfType<SirenSingState>().SirenDoneSinging();
+        FindObjectOfType<SirenMoveNoteAnim>().HideSirenMarker();
     }
 
     public void PlayNote(NoteInputType type)
