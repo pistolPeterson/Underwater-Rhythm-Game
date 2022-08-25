@@ -35,6 +35,8 @@ public class ButtonInput : MonoBehaviour
     private bool isPressing;
     private float lastTimePressed;
 
+    public bool AllowInput { get; set; } = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +54,11 @@ public class ButtonInput : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-
+        if (!AllowInput)
+        {
+            Debug.Log("Not allowing input");
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Q) )
         {
             StartPressing();

@@ -46,11 +46,11 @@ public class PlayerMovement : MonoBehaviour
         //flipping mechanic 
         if(moveHorizontal > 0 && !facingRight )
         {
-            Flip();
+           // Flip();
         }
         if(moveHorizontal < 0 && facingRight)
         {
-            Flip();
+        //    Flip();
         }
     }
 

@@ -45,15 +45,24 @@ public class ButtonInputManager : MonoBehaviour
         if (IsSameMelody(userNotes, melody))
         {
             Debug.Log("you played it correctly!");
+            //play good feedback 
         }
         else
         {
             Debug.Log("rip you played it incorrrectly");
+            //play bad feedback 
 
         }
 
-        //continue to round 2/3?
+        //Go to gamemanager, use a lil wait time, figure out if you gotta do a new melody or go to end battle 
+        StartCoroutine(GoToEndBattle());
 
+    }
+    private IEnumerator GoToEndBattle()
+    {
+        yield return new WaitForSeconds(1);
+        
+        FindObjectOfType<PlayerInputState>().PlayerInputDone();
     }
 
     private bool IsSameMelody(List<NoteObject> userNotes, List<NoteObject> melody)

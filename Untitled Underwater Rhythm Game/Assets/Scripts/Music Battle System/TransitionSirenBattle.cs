@@ -10,24 +10,33 @@ public class TransitionSirenBattle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !battleStarted)
         {
-            battleStarted = true;
+            var state = FindObjectOfType<WaitForBattleState>();
+            state.GoToBattle();
 
-            Debug.Log("Time to start a siren battle");
-            //add delay between steps?
-
-            MusicTrigger();
-            //move siren to correct position
-            MoveSiren();
-            //freeze player and move player to correct position
-            MovePlayer();
-            //zoom camera to correct position 
-            ZoomCam();
-            //unlock Music battle UI 
-
-            //delay would be nice here 
-            //unlock music battle state machine 
-            //Fmod stuff?
+            
         }
+    }
+
+    public void SetUpBattle()
+    {
+        Debug.Log("Time to start a siren battle");
+        //add delay between steps?
+
+        MusicTrigger();
+        //move siren to correct position
+        MoveSiren();
+        //freeze player and move player to correct position
+        MovePlayer();
+        //zoom camera to correct position 
+        ZoomCam();
+        //unlock Music battle UI 
+
+        //delay would be nice here 
+        //unlock music battle state machine 
+        //Fmod stuff?
+
+        //probably put this in a ienum to make it wait a bit 
+        FindObjectOfType<SetUpBattleState>().BattleIsSetUp(); 
     }
 
     void MoveSiren()
