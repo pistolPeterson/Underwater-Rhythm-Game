@@ -27,6 +27,6 @@ public class MainMenuMusic : MonoBehaviour
     }
     public void MusicTransition()
     {
-        instance.setParameterByName("Player Progression", 4.1f);
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

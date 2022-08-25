@@ -18,13 +18,15 @@ public class SFXManager : MonoBehaviour
     private FMOD.Studio.EventInstance playStingerInstance;
     public EventReference playStingerSFX;
 
+    private FMOD.Studio.EventInstance battleMusicInstance;
+    public EventReference battleMusic;
 
     private void Start()
     {
         waterAmbiInstance = RuntimeManager.CreateInstance(waterAmbienceSfx);
         ui1Instance = RuntimeManager.CreateInstance(ui1SFX);
         ui2Instance = RuntimeManager.CreateInstance(ui2SFX);
-
+        battleMusicInstance = RuntimeManager.CreateInstance(battleMusic);
         playStingerInstance = RuntimeManager.CreateInstance(playStingerSFX);
         waterAmbiInstance.start();
         DontDestroyOnLoad(this);
@@ -46,4 +48,13 @@ public class SFXManager : MonoBehaviour
         playStingerInstance.start();
     }
 
+    public void StartBattleMusic()
+    {
+        battleMusicInstance.start();
+    }
+
+    public void StopBattleMusic()
+    {
+        battleMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }

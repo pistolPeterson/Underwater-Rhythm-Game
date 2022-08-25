@@ -7,9 +7,10 @@ public class RotateToTarget : MonoBehaviour
     public float rotSpeed;
     private Vector2 direction;
     public float moveSpeed = 2.0f;
-
+    public bool useRotation;
     private void Update()
     {
+        if (!useRotation) return;
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
 

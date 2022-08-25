@@ -35,10 +35,12 @@ public class EndBattleState : MBSMState
         sucessAnim.SetActive(false);
         sirenSingAnim.SetActive(false);
         FindObjectOfType<PlayerMovement>().UnFreezePlayer();
+        FindObjectOfType<PlayerMovement>().gameObject.GetComponent<RotateToTarget>().useRotation = true;
         FindObjectOfType<CameraFollow>().FollowPlayer();
         FindObjectOfType<TransitionSirenBattle>().MoveSirenExitBattle();
         sirenLaughInstance.start();
         FindObjectOfType<TransitionSirenBattle>().ResetBattle();
+        FindObjectOfType<SFXManager>().StopBattleMusic();
     }
 
     public override void Destruct()

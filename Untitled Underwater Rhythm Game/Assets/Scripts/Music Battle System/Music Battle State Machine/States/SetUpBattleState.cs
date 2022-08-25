@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class SetUpBattleState : MBSMState
 {
@@ -9,6 +10,8 @@ public class SetUpBattleState : MBSMState
     [SerializeField] private GameObject battleBoard;
     [SerializeField] private GameObject successAnim;
     [SerializeField] private GameObject sirenSingAnim;
+
+  
     private void Start()
     {
         battleSetUp = false;
@@ -22,6 +25,7 @@ public class SetUpBattleState : MBSMState
         successAnim.SetActive(true);
         sirenSingAnim.SetActive(true);
         FindObjectOfType<SirenMoveNoteAnim>().ShowSirenMarkerEmpty();
+        FindObjectOfType<SFXManager>().StartBattleMusic();
     }
 
     public override void Destruct()

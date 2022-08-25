@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &120451655885385782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120451655885385776}
+  - component: {fileID: 120451655885385779}
+  m_Layer: 0
+  m_Name: 'play water ambience '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &120451655885385776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120451655885385782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -49.68983, y: -6.9802547, z: -0.123686306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120451655885385779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120451655885385782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9e111ff9b23304c83db77ae4b27099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterAmbienceSfx:
+    Guid:
+      Data1: -881134055
+      Data2: 1122489110
+      Data3: -1528831093
+      Data4: 958780370
+    Path: event:/Main Menu Underwater Ambi
+  ui1SFX:
+    Guid:
+      Data1: -916375458
+      Data2: 1117679933
+      Data3: 1048022436
+      Data4: -1377118991
+    Path: event:/UI sound 1
+  ui2SFX:
+    Guid:
+      Data1: 925494024
+      Data2: 1222463061
+      Data3: 1332705427
+      Data4: -1993369712
+    Path: event:/UI sound 2
+  playStingerSFX:
+    Guid:
+      Data1: -458587516
+      Data2: 1145711915
+      Data3: 425789087
+      Data4: -1168686870
+    Path: 'event:/Play Stinger '
+  battleMusic:
+    Guid:
+      Data1: 1125428970
+      Data2: 1284013687
+      Data3: 501939369
+      Data4: 109482012
+    Path: event:/MusicBattle

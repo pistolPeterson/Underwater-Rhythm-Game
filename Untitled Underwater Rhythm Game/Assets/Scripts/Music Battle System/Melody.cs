@@ -62,7 +62,7 @@ public class Melody : MonoBehaviour
         
         foreach (NoteObject note in melody)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.84f);
             //switch case based on note type 
             PlayNote(note.GetNoteInputType());
             //play specific animation based on note input 
