@@ -42,7 +42,7 @@ public class TransitionSirenBattle : MonoBehaviour
 
     private IEnumerator waitThenSetUpBattle()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(7.0f);
         FindObjectOfType<SetUpBattleState>().BattleIsSetUp();
     }
     void MoveSirenIntoBattle()
