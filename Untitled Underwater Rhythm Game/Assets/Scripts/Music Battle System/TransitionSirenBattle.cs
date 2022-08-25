@@ -24,7 +24,7 @@ public class TransitionSirenBattle : MonoBehaviour
 
         MusicTrigger();
         //move siren to correct position
-        MoveSiren();
+        MoveSirenIntoBattle();
         //freeze player and move player to correct position
         MovePlayer();
         //zoom camera to correct position 
@@ -36,13 +36,25 @@ public class TransitionSirenBattle : MonoBehaviour
         //Fmod stuff?
 
         //probably put this in a ienum to make it wait a bit 
-        FindObjectOfType<SetUpBattleState>().BattleIsSetUp(); 
+        StartCoroutine(waitThenSetUpBattle());
     }
 
-    void MoveSiren()
+
+    private IEnumerator waitThenSetUpBattle()
+    {
+        yield return new WaitForSeconds(1.0f);
+        FindObjectOfType<SetUpBattleState>().BattleIsSetUp();
+    }
+    void MoveSirenIntoBattle()
     {
         Vector3 newPosition = new Vector3(130 ,0, 0);
         transform.DOMove(newPosition, 4);
+    }
+
+    public void MoveSirenExitBattle()
+    {
+        Vector3 newPosition = new Vector3(200, 5, 0);
+        transform.DOMove(newPosition, 3.5f);
     }
 
     void MovePlayer()
@@ -50,7 +62,7 @@ public class TransitionSirenBattle : MonoBehaviour
         PlayerMovement playerM = FindObjectOfType<PlayerMovement>();
         playerM.FreezePlayer();
 
-        Vector3 newPosition = new Vector3(30, 0, 0);
+        Vector3 newPosition = new Vector3(30, 0, 0); //another array of positions? 
         playerM.transform.DOMove(newPosition, 4);
 
     }

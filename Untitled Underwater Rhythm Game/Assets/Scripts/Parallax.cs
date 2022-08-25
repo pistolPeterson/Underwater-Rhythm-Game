@@ -6,7 +6,7 @@ public class Parallax : MonoBehaviour
 {
     Vector3 basePos;
     Vector3 camBase;
-    Camera camera;
+    new Camera camera;
     private void Awake()
     {
 

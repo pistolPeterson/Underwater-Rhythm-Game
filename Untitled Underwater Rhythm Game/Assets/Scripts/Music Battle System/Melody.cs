@@ -60,26 +60,28 @@ public class Melody : MonoBehaviour
 
     public void PlayNote(NoteInputType type)
     {
+        var sirenAnim = FindObjectOfType<SirenMoveNoteAnim>();
+
         switch(type)
         {
             case NoteInputType.W:
                 Debug.Log("Playing W");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Flute melody/fluteW", transform.position);
+                sirenAnim.SirenSingWAnim();
                 instance1.start();
                 break;
             case NoteInputType.Q:
                 Debug.Log("Playing Q");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Flute melody/fluteQ", transform.position);
+                sirenAnim.SirenSingQAnim();
                 instance2.start();
                 break;
             case NoteInputType.E:
                 Debug.Log("Playing E");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Flute melody/fluteE", transform.position);
+                sirenAnim.SirenSingEAnim();
                 instance3.start();
                 break;
             case NoteInputType.R:
                 Debug.Log("Playing R");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Flute melody/fluteR", transform.position);
+                sirenAnim.SirenSingRAnim();
                 instance4.start();
                 break;
         }

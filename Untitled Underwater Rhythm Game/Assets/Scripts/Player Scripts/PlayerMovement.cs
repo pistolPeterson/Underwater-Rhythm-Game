@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] [Range (5.0f, 15.0f)]private float moveSpeed;
+   // [SerializeField] [Range(248f, 512f)] private float rotSpeed;
     private float moveHorizontal;
     private float moveVertical;
 
@@ -38,20 +39,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveHorizontal != 0f || moveVertical != 0f)
         {
-            rb2D.velocity = new Vector2(moveHorizontal * moveSpeed, moveVertical * moveSpeed);
+             rb2D.velocity = new Vector2(moveHorizontal * moveSpeed, moveVertical * moveSpeed);
+           // rb2D.MovePosition(rb2D.position + new Vector2(moveHorizontal, moveVertical) * moveSpeed * Time.deltaTime);
         }
+
+
+       
+
         
-
-
-        //flipping mechanic 
-        if(moveHorizontal > 0 && !facingRight )
-        {
-           // Flip();
-        }
-        if(moveHorizontal < 0 && facingRight)
-        {
-        //    Flip();
-        }
     }
 
     void Flip()

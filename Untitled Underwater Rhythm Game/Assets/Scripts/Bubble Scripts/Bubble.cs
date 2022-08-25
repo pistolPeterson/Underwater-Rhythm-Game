@@ -13,7 +13,7 @@ public class Bubble : MonoBehaviour
     private PathType pathType = PathType.CatmullRom;
     private PathMode pathMode = PathMode.Sidescroller2D;
     
-    public static event Action fss;
+    
    
 
 

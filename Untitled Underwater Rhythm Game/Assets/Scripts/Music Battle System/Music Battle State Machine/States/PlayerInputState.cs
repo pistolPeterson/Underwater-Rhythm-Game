@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerInputState : MBSMState
 {
     public MBSMState endBattleState;
-    public bool finishedInputState; 
+    public bool finishedInputState;
+    [SerializeField] private GameObject sirenSingAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class PlayerInputState : MBSMState
         //allow input from user in ButtonInput 
         FindObjectOfType<ButtonInput>().AllowInput = true;
         finishedInputState = false;
+        sirenSingAnim.SetActive(false);
 
     }
 

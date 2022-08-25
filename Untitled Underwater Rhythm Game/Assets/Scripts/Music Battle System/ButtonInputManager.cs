@@ -70,10 +70,17 @@ public class ButtonInputManager : MonoBehaviour
         for(int i =0; i < melody.Count; i++)
         {
             if(userNotes[i].GetNoteInputType() != melody[i].GetNoteInputType())
+            {
+                Debug.Log("not same input type");
                 return false;
+            }
+                
 
             if(userNotes[i].GetNoteLength() != melody[i].GetNoteLength())
+            {
+                Debug.Log("not same length");
                 return false;
+            }
         }
 
         return true; 

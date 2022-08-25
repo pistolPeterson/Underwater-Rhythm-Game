@@ -8,6 +8,8 @@ public class CameraFollow : MonoBehaviour
     public Transform playerPos;
     private Transform cam;
     private bool followPlayer = true;
+
+    public float speed = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
        if(followPlayer)
             FollowPlayer();
@@ -25,8 +27,11 @@ public class CameraFollow : MonoBehaviour
 
     public void FollowPlayer()
     {
+        float interpolation = speed * Time.deltaTime;
         followPlayer = true;
         var newPos = new Vector3(playerPos.position.x, playerPos.position.y, cam.position.z);
+        newPos.x = Mathf.Lerp(transform.position.x, playerPos.position.x, interpolation);
+        newPos.y = Mathf.Lerp(transform.position.y, playerPos.position.y, interpolation);
         gameObject.transform.position = newPos;
     }
 

@@ -8,6 +8,7 @@ public class WaitForBattleState : MBSMState
     public bool goToBattle = false;
     [SerializeField] private GameObject battleBoard;
     [SerializeField] private GameObject successAnim;
+    [SerializeField] private GameObject sirenSingAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class WaitForBattleState : MBSMState
         goToBattle = false; 
         battleBoard.SetActive(false);
         successAnim.SetActive(false);
+        sirenSingAnim.SetActive(false);
     }
 
     public override void Destruct()

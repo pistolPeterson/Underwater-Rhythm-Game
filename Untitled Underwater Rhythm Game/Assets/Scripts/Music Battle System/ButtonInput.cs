@@ -68,7 +68,7 @@ public class ButtonInput : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Q))
         {
-            StopPressing();
+            StopPressing(NoteInputType.Q);
             StopNote(NoteInputType.Q);
         }
 
@@ -81,7 +81,7 @@ public class ButtonInput : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-            StopPressing();
+            StopPressing(NoteInputType.W);
             StopNote(NoteInputType.W);
         }
 
@@ -94,7 +94,7 @@ public class ButtonInput : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.E))
         {
-            StopPressing();
+            StopPressing(NoteInputType.E);
             StopNote(NoteInputType.E);
         }
 
@@ -107,7 +107,7 @@ public class ButtonInput : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.R))
         {
-            StopPressing();
+            StopPressing(NoteInputType.R);
             StopNote(NoteInputType.R);
         }
     }
@@ -120,16 +120,16 @@ public class ButtonInput : MonoBehaviour
         
     }
 
-    void StopPressing()
+    void StopPressing(NoteInputType type)
     {
         if (!isPressing) return;
 
         isPressing = false; 
         lastTimePressed = time;
         if (lastTimePressed >= 0.4f)
-            noteEvent?.Invoke(NoteLength.LONG, noteType);
+            noteEvent?.Invoke(NoteLength.LONG, type);
         else
-            noteEvent?.Invoke(NoteLength.SHORT, noteType);
+            noteEvent?.Invoke(NoteLength.SHORT, type);
 
         //stop playing note audio event
         instance1.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
