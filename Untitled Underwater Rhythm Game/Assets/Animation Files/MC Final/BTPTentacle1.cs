@@ -28,6 +28,7 @@ public class BTPTentacle1 : MonoBehaviour
         lineRend.positionCount = length;
         segmentPoses = new Vector3[length];
         segmentV = new Vector3[length];
+        ResetPos();
     }
 
     // Update is called once per frame
@@ -49,6 +50,15 @@ public class BTPTentacle1 : MonoBehaviour
                 smoothVal = smoothSpeed;
             }
             segmentPoses[i] = Vector3.SmoothDamp(segmentPoses[i], segmentPoses[i - 1] + targetDir.right * targetDist, ref segmentV[i], smoothVal);
+        }
+        lineRend.SetPositions(segmentPoses);
+    }
+    private void ResetPos()
+    {
+        segmentPoses[0] = targetDir.position;
+        for (int i = 1; i < length; i++)
+        {
+            segmentPoses[i] = segmentPoses[i - 1] + targetDir.right * targetDist;
         }
         lineRend.SetPositions(segmentPoses);
     }
