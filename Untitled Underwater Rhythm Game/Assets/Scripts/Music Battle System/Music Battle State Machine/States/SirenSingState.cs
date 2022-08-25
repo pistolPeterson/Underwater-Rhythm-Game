@@ -35,6 +35,7 @@ public class SirenSingState : MBSMState
 
     public override void UpdateState()
     {
+        Debug.Log("doneSinging is false bruv");
        //after a certain time, switch to player input state, use a simple timer system 
        if(doneSinging)
         {

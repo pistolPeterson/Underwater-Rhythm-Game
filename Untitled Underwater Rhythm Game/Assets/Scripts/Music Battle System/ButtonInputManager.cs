@@ -35,7 +35,7 @@ public class ButtonInputManager : MonoBehaviour
             Debug.Log(x.GetNoteInputType() + " " + x.GetNoteLength());
         }
 
-        VerifyInputNotes(noteObjects, FindObjectOfType<Melody>().lvl1Melody);
+        VerifyInputNotes(noteObjects, FindObjectOfType<Melody>().currentMelody);
 
         noteObjects = new List<NoteObject>();
     }

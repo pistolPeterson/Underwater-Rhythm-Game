@@ -6,6 +6,9 @@ using FMODUnity;
 public class Melody : MonoBehaviour
 {
     public List<NoteObject> lvl1Melody;
+    public List<NoteObject> lvl1Rd2Melody;
+
+    public List<NoteObject> currentMelody;
 
     private FMOD.Studio.EventInstance instance1;
     public EventReference noteSFX1;
@@ -17,9 +20,13 @@ public class Melody : MonoBehaviour
     private FMOD.Studio.EventInstance instance4;
     public EventReference noteSFX4;
 
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        currentMelody = lvl1Melody;
+        gameManager = FindObjectOfType<GameManager>();  
         instance1 = RuntimeManager.CreateInstance(noteSFX1);
         instance2 = RuntimeManager.CreateInstance(noteSFX2);
         instance3 = RuntimeManager.CreateInstance(noteSFX3);
@@ -34,12 +41,19 @@ public class Melody : MonoBehaviour
 
     public void SirenSingMelody()
     {
-        //iterate through melody (ienum)
-        //foreach note type 
-        //play the corresponding note 
-        //play corresponding animation 
-        StartCoroutine(sing(lvl1Melody));
+        //Go to gamemanager, check round to play correct melody 
+       // StartCoroutine(sing(lvl1Melody));
+        switch(gameManager.GetCurrentRound())
+        {
+            case 0:
+                StartCoroutine(sing(lvl1Melody));
+                break;
+            case 1:
+                currentMelody = lvl1Rd2Melody;
+                StartCoroutine(sing(lvl1Rd2Melody));
+                break; 
 
+        }
 
     }
 
