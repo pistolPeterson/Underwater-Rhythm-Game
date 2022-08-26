@@ -621,6 +621,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 120451655885385779, guid: 586430b5fd7a60647949d9efa180760e, type: 3}
+      propertyPath: playStinger2SFX.Path
+      value: event:/Play Stinger 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 120451655885385779, guid: 586430b5fd7a60647949d9efa180760e, type: 3}
+      propertyPath: playStinger2SFX.Guid.Data1
+      value: -474536073
+      objectReference: {fileID: 0}
+    - target: {fileID: 120451655885385779, guid: 586430b5fd7a60647949d9efa180760e, type: 3}
+      propertyPath: playStinger2SFX.Guid.Data2
+      value: 1297806155
+      objectReference: {fileID: 0}
+    - target: {fileID: 120451655885385779, guid: 586430b5fd7a60647949d9efa180760e, type: 3}
+      propertyPath: playStinger2SFX.Guid.Data3
+      value: 218110106
+      objectReference: {fileID: 0}
+    - target: {fileID: 120451655885385779, guid: 586430b5fd7a60647949d9efa180760e, type: 3}
+      propertyPath: playStinger2SFX.Guid.Data4
+      value: 733723085
+      objectReference: {fileID: 0}
     - target: {fileID: 120451655885385782, guid: 586430b5fd7a60647949d9efa180760e, type: 3}
       propertyPath: m_Name
       value: 'play water ambience '

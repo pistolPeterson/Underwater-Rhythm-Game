@@ -11,13 +11,11 @@ public class EndBattleState : MBSMState
     [SerializeField] private GameObject sucessAnim;
     [SerializeField] private GameObject sirenSingAnim;
 
-    private FMOD.Studio.EventInstance sirenLaughInstance;
-    public EventReference sirenLaughSFX;
     // Start is called before the first frame update
     void Start()
     {
         battleEnded = false;
-        sirenLaughInstance = RuntimeManager.CreateInstance(sirenLaughSFX);
+       
     }
 
     // Update is called once per frame
@@ -38,7 +36,7 @@ public class EndBattleState : MBSMState
         FindObjectOfType<PlayerMovement>().gameObject.GetComponent<RotateToTarget>().useRotation = true;
         FindObjectOfType<CameraFollow>().FollowPlayer();
         FindObjectOfType<TransitionSirenBattle>().MoveSirenExitBattle();
-        sirenLaughInstance.start();
+        
         FindObjectOfType<TransitionSirenBattle>().ResetBattle();
         FindObjectOfType<SFXManager>().StopBattleMusic();
     }

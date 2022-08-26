@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using FMODUnity;
 
 public class TransitionSirenBattle : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class TransitionSirenBattle : MonoBehaviour
 
     private IEnumerator waitThenSetUpBattle()
     {
-        yield return new WaitForSeconds(7.0f);
+        yield return new WaitForSeconds(5.0f);
         FindObjectOfType<SetUpBattleState>().BattleIsSetUp();
     }
     void MoveSirenIntoBattle()
@@ -87,8 +88,11 @@ public class TransitionSirenBattle : MonoBehaviour
     void MusicTrigger()
     {
         var music = FindObjectOfType<MainMenuMusic>();
+        var trigger = FindObjectOfType<SFXManager>(); 
         if (music != null)
             music.MusicTransition();
+        if(trigger != null)
+            trigger.PlayStinger2();   
     }
 
     public void ResetBattle() { battleStarted = false; }

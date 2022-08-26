@@ -45,12 +45,17 @@ public class ButtonInputManager : MonoBehaviour
         if (IsSameMelody(userNotes, melody))
         {
             Debug.Log("you played it correctly!");
+
             //play good feedback 
+            //find sfx manager, increase music progression 
+            FindObjectOfType<SFXManager>().IncreaseBattleMusic();
         }
         else
         {
             Debug.Log("rip you played it incorrrectly");
             //play bad feedback 
+            //find sfx manager, decrease music progression 
+            FindObjectOfType<SFXManager>().DecreaseBattleMusic();
 
         }
 

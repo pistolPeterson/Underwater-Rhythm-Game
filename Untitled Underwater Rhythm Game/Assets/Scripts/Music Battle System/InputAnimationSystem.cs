@@ -24,8 +24,8 @@ public class InputAnimationSystem : MonoBehaviour
 
     public void PlayBlueSuccess()
     {
-        if (anim == null) return; 
-
+        if (anim == null) return;
+        anim.SetTrigger("Blue");
         anim.Play("blue good");
     }
     public void PlayRedSuccess()
@@ -33,17 +33,19 @@ public class InputAnimationSystem : MonoBehaviour
         if (anim == null) return;
 
         anim.Play("red good");
+        anim.SetTrigger("Red");
+        Debug.Log("playin some red good ");
     }
     public void PlayPinkSuccess()
     {
         if (anim == null) return;
-
+        anim.SetTrigger("Pink");
         anim.Play("pink good");
     }
     public void PlayYellowSuccess()
     {
         if (anim == null) return;
-
+        anim.SetTrigger("Yellow");
         anim.Play("yellow good");
     }
 }

@@ -72,6 +72,13 @@ MonoBehaviour:
       Data3: 425789087
       Data4: -1168686870
     Path: 'event:/Play Stinger '
+  playStinger2SFX:
+    Guid:
+      Data1: -474536073
+      Data2: 1297806155
+      Data3: 218110106
+      Data4: 733723085
+    Path: event:/Play Stinger 2
   battleMusic:
     Guid:
       Data1: 1125428970
@@ -79,3 +86,24 @@ MonoBehaviour:
       Data3: 501939369
       Data4: 109482012
     Path: event:/MusicBattle
+  sirenHissSfx:
+    Guid:
+      Data1: -721886425
+      Data2: 1168981652
+      Data3: 443529609
+      Data4: -1117939309
+    Path: 'event:/Siren Hiss '
+  sirenRageSfx:
+    Guid:
+      Data1: -1423149855
+      Data2: 1147715999
+      Data3: -23373393
+      Data4: -1404376518
+    Path: event:/Siren Rage
+  sirenLaughSFX:
+    Guid:
+      Data1: -1778733819
+      Data2: 1115317104
+      Data3: 50536087
+      Data4: 1462001469
+    Path: event:/Siren Laugh
