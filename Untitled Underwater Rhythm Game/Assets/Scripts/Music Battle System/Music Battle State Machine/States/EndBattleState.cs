@@ -51,7 +51,8 @@ public class EndBattleState : MBSMState
         //go to waiting for battle state 
         if (battleEnded)
         {
-            motor.ChangeState(waitingForBattle);
+            Debug.Log("you commented out the end battle state btw");
+           // motor.ChangeState(waitingForBattle);
         }
     }
 

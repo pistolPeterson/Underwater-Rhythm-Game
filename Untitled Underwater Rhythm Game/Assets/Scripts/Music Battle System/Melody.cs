@@ -10,6 +10,8 @@ public class Melody : MonoBehaviour
 
     public List<NoteObject> currentMelody;
 
+    public List<MelodyBaseSO> melodies;
+
     private FMOD.Studio.EventInstance instance1;
     public EventReference noteSFX1;
 
@@ -42,18 +44,25 @@ public class Melody : MonoBehaviour
     public void SirenSingMelody()
     {
         //Go to gamemanager, check round to play correct melody 
-       // StartCoroutine(sing(lvl1Melody));
-        switch(gameManager.GetCurrentRound())
-        {
-            case 0:
-                StartCoroutine(sing(lvl1Melody));
-                break;
-            case 1:
-                currentMelody = lvl1Rd2Melody;
-                StartCoroutine(sing(lvl1Rd2Melody));
-                break; 
+        // StartCoroutine(sing(lvl1Melody));
+        int rand = Random.Range(0, melodies.Count);
+        Debug.Log("singing " + rand);
+        currentMelody = melodies[rand].melody;
+        StartCoroutine(sing(melodies[rand].melody)); //method to choose a random one from here 
+        /* switch(gameManager.GetCurrentRound())
+         {
+             case 0:
+                 //StartCoroutine(sing(lvl1Melody));
+                 break;
+             case 1:
+                 currentMelody = lvl1Rd2Melody;
+                 StartCoroutine(sing(lvl1Rd2Melody));
+                 break; 
+                 default:
 
-        }
+                 break;
+
+         }*/
 
     }
 
@@ -69,7 +78,6 @@ public class Melody : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
         //tell siren sing state we are done 
-        Debug.Log("tell siren sing state we are done singing");
         FindObjectOfType<SirenSingState>().SirenDoneSinging();
         FindObjectOfType<SirenMoveNoteAnim>().HideSirenMarker();
     }
@@ -81,22 +89,18 @@ public class Melody : MonoBehaviour
         switch(type)
         {
             case NoteInputType.W:
-                Debug.Log("Playing W");
                 sirenAnim.SirenSingWAnim();
                 instance1.start();
                 break;
             case NoteInputType.Q:
-                Debug.Log("Playing Q");
                 sirenAnim.SirenSingQAnim();
                 instance2.start();
                 break;
             case NoteInputType.E:
-                Debug.Log("Playing E");
                 sirenAnim.SirenSingEAnim();
                 instance3.start();
                 break;
             case NoteInputType.R:
-                Debug.Log("Playing R");
                 sirenAnim.SirenSingRAnim();
                 instance4.start();
                 break;

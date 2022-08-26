@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 70bc7bf63ad181546a51f88c77f51705
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/UnderwaterCave 1.unity
     guid: aa71ba63ed1dde0469e80b26ca02a20b
-  - enabled: 1
-    path: Assets/Scenes/SirenMusicBattle.unity
-    guid: 77a54509e48658f45b5580293823e975
   m_configObjects: {}

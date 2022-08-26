@@ -29,6 +29,6 @@ public class GameManager : MonoBehaviour
     public void NextRound()
     {
         currentRound++;
-        FindObjectOfType<Melody>(); //go to melody and switch to another melody
+        
     }
 }

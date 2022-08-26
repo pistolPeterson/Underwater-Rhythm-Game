@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using FMODUnity;
 
 public class SFXManager : MonoBehaviour
@@ -34,9 +35,12 @@ public class SFXManager : MonoBehaviour
     private FMOD.Studio.EventInstance sirenLaughInstance;
     public EventReference sirenLaughSFX;
 
+ 
+   
     private float battleMusicProgression;
     private void Start()
     {
+     
         waterAmbiInstance = RuntimeManager.CreateInstance(waterAmbienceSfx);
         ui1Instance = RuntimeManager.CreateInstance(ui1SFX);
         ui2Instance = RuntimeManager.CreateInstance(ui2SFX);
@@ -86,7 +90,7 @@ public class SFXManager : MonoBehaviour
 
     public void IncreaseBattleMusic()
     {
-        battleMusicProgression += 1.0f;
+        battleMusicProgression += 0.5f;
         if (battleMusicProgression > 3.5f)
         {
             battleMusicProgression = 3.01f;
@@ -100,11 +104,13 @@ public class SFXManager : MonoBehaviour
 
     public void DecreaseBattleMusic()
     {
-        battleMusicProgression -= 1.0f;
+        battleMusicProgression -= 2.0f;
         if (battleMusicProgression < 0.0f)
             battleMusicProgression = 1.01f;
         battleMusicInstance.setParameterByName("BattlePhase", battleMusicProgression);
         PlaySirenLaugh();
 
     }
+
+    
 }

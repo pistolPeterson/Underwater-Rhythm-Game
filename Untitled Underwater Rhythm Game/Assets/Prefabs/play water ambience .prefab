@@ -107,3 +107,5 @@ MonoBehaviour:
       Data3: 50536087
       Data4: 1462001469
     Path: event:/Siren Laugh
+  slider: {fileID: 0}
+  busPath: bus:/Master Bus

@@ -34,7 +34,6 @@ public class InputAnimationSystem : MonoBehaviour
 
         anim.Play("red good");
         anim.SetTrigger("Red");
-        Debug.Log("playin some red good ");
     }
     public void PlayPinkSuccess()
     {

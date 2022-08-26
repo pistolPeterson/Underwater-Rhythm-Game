@@ -81,11 +81,7 @@ public class ButtonInputManager : MonoBehaviour
             }
                 
 
-            if(userNotes[i].GetNoteLength() != melody[i].GetNoteLength())
-            {
-                Debug.Log("not same length");
-                return false;
-            }
+           
         }
 
         return true; 
