@@ -13,13 +13,13 @@ public class InputAnimationSystem : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Q))
-            PlayBlueSuccess();
-        if (Input.GetKeyDown(KeyCode.W))
             PlayRedSuccess();
+        if (Input.GetKeyDown(KeyCode.W))
+            PlayBlueSuccess();
         if (Input.GetKeyDown(KeyCode.E))
-            PlayPinkSuccess();
-        if (Input.GetKeyDown(KeyCode.R))
             PlayYellowSuccess();
+        if (Input.GetKeyDown(KeyCode.R))
+            PlayPinkSuccess();
     }
 
     public void PlayBlueSuccess()
