@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     
     public GameObject mainMenuPanel;
+    public GameObject creditsPanel;
     private bool panelState = false;
 
     private void Start()
@@ -15,6 +16,16 @@ public class MainMenu : MonoBehaviour
           mainMenuPanel.SetActive(panelState);
     }
 
+    public void ShowCreditsPanel()
+    {
+        creditsPanel.SetActive(true);
+    }
+
+    public void HideCreditsPanel()
+    {
+        creditsPanel.SetActive(false);
+
+    }
 
     public void TogglePanel()
     {
@@ -25,7 +36,6 @@ public class MainMenu : MonoBehaviour
 
     public void GoToOverworld()
     {
-        Debug.Log("Starting next game");
         FindObjectOfType<LevelLoader>().LoadNextLevel();     
     }
 }
