@@ -44,7 +44,7 @@ public class PlayerInputState : MBSMState
            
 
             //Go to gamemanager, check if current round is 2 
-            if (gameManager.GetCurrentRound() == 7)
+            if (gameManager.GetCurrentRound() == 5)
             {
                 motor.ChangeState(endBattleState);
             }
