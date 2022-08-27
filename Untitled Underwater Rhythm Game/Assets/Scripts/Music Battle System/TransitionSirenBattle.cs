@@ -48,7 +48,7 @@ public class TransitionSirenBattle : MonoBehaviour
     }
     void MoveSirenIntoBattle()
     {
-        Vector3 newPosition = new Vector3(130 ,0, 0);
+        Vector3 newPosition = new Vector3(66 ,17, 0);
         transform.DOMove(newPosition, 4);
        
     }
@@ -70,7 +70,7 @@ public class TransitionSirenBattle : MonoBehaviour
         PlayerMovement playerM = FindObjectOfType<PlayerMovement>();
         playerM.FreezePlayer();
         playerM.gameObject.GetComponent<RotateToTarget>().useRotation = false;
-        Vector3 newPosition = new Vector3(30, 0, 0); //another array of positions? 
+        Vector3 newPosition = new Vector3(-6, 5, 0); //another array of positions? 
         playerM.transform.DOMove(newPosition, 4);
         playerM.transform.DORotate(new Vector3(0, 0, 0), 3.5f);
     
@@ -82,7 +82,7 @@ public class TransitionSirenBattle : MonoBehaviour
     {
 
 
-        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(80, 15, -125));
+        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(30, 0, -125));
     }
 
     void MusicTrigger()
