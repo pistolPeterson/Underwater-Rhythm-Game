@@ -82,7 +82,7 @@ public class TransitionSirenBattle : MonoBehaviour
     {
 
 
-        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(30, 0, -125));
+        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(30, 0, -20));
     }
 
     void MusicTrigger()
