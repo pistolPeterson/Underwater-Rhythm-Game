@@ -7,6 +7,14 @@ public class MainMenuMusic : MonoBehaviour
 {
     private FMOD.Studio.EventInstance instance;
     public EventReference startMusic;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        }
+    }
+    
 
     private void Start()
     {

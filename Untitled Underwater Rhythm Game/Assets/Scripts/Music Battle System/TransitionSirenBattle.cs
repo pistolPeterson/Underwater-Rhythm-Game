@@ -70,7 +70,7 @@ public class TransitionSirenBattle : MonoBehaviour
         PlayerMovement playerM = FindObjectOfType<PlayerMovement>();
         playerM.FreezePlayer();
         playerM.gameObject.GetComponent<RotateToTarget>().useRotation = false;
-        Vector3 newPosition = new Vector3(-6, 5, 0); //another array of positions? 
+        Vector3 newPosition = new Vector3(-35, 5, 0); //another array of positions? 
         playerM.transform.DOMove(newPosition, 4);
         playerM.transform.DORotate(new Vector3(0, 0, 0), 3.5f);
     
@@ -82,7 +82,7 @@ public class TransitionSirenBattle : MonoBehaviour
     {
 
 
-        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(30, 0, -20));
+        FindObjectOfType<CameraFollow>().FollowObjectOneTime(new Vector3(8, 0, -20));
     }
 
     void MusicTrigger()
